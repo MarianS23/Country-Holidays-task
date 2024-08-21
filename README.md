@@ -1,27 +1,66 @@
-# CountriesTestTask
+# Country-Holidays-task
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+Country-Holidays-task is a web application designed to help users find information about holidays in different country
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To get started with Country-Holidays-task, follow these steps:
 
-## Code scaffolding
+1. **Clone the repository:**
+    git clone https://github.com/MarianS23/Country-Holidays-task.git
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. **Navigate to the project directory:**
+
+    cd Country-Holidays-task
+    
+3. **Install dependencies:**
+
+    npm install
+
+3. **start the app:**
+
+    ng serve -o
+    or
+    npm start .Navigate to `http://localhost:4200/`.
+
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+### Basic Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. **Create a new task:**
+   - Click on the "Add Task" button.
+   - Enter the task details and click "Save."
 
-## Running end-to-end tests
+2. **View tasks:**
+   - Tasks will be displayed in the main dashboard.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. **Edit or delete tasks:**
+   - Click on the task to edit or delete it.
 
-## Further help
+Country-Holidays-task/
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+│
+├── src/
+│    ├── app/
+│    │    ├── components/
+│    │    │    ├── country-page/
+│    │    │    ├── home/
+│    │    │    ├── widget-card/
+│    │    ├── shared/
+│    │    ├── app-routing.module
+│    │    ├── app.component.html
+│    │    ├── app.component.scss
+│    │    ├── app.component.spec.ts
+│    │    ├── app.module.ts
+│    ├── assets/
+│    ├── environment/
+│        └── env.ts
+├── .eslintrc.json
+├── .prittierrc.json
+├── package-lock.json
+├── package.json
+└── README.md
