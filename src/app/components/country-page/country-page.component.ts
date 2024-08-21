@@ -9,7 +9,7 @@ import { GetDataService } from 'src/app/shared/services/get-data.service';
   styleUrls: ['./country-page.component.scss']
 })
 export class CountryPageComponent {
-  public yearsList: number[] = Array.from({ length: 11 }, (_, i) => 2020 + i);;
+  public yearsList: number[] = Array.from({ length: 11 }, (_, i) => 2020 + i);
   public selectedYear: number = new Date().getFullYear();
   public currentCountryCode!: string;
   public currentCountryName!: string;

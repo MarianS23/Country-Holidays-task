@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environment/env';
 import { Observable } from 'rxjs';
-import { Country,Holiday } from '../interfaces/interface'
+import { Country,Holiday } from '../interfaces/interface';
 
 
 @Injectable({

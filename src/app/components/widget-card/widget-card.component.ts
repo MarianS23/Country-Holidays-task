@@ -10,8 +10,8 @@ import { GetDataService } from 'src/app/shared/services/get-data.service';
   styleUrls: ['./widget-card.component.scss']
 })
 export class WidgetCardComponent implements OnInit {
-  public currentCountry!: Country
-  public currentHoliday!: Holiday
+  public currentCountry!: Country;
+  public currentHoliday!: Holiday;
 
   constructor(
     private getDataService: GetDataService,
@@ -24,17 +24,17 @@ export class WidgetCardComponent implements OnInit {
 
   getCountryList(): void {
     this.getDataService.getAvailableCountries().subscribe(res => {
-      this.currentCountry = this.getRandomCountry(res)
-      this.getNextHolidays()
-    })
+      this.currentCountry = this.getRandomCountry(res);
+      this.getNextHolidays();
+    });
   }
 
   getNextHolidays(): void {
     this.getDataService.getNextPublicHolidays(this.currentCountry.countryCode)
       .pipe(map(res => res[0]))
       .subscribe(res => {
-        this.currentHoliday = res
-      })
+        this.currentHoliday = res;
+      });
   }
 
   getRandomCountry(countryList: Country[]): Country {

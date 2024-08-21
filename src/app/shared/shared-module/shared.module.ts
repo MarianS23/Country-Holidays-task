@@ -23,12 +23,12 @@ const MATERIAL = [
   MatPaginatorModule,
   MatAutocompleteModule,
   MatButtonToggleModule
-]
+];
 
 const FORM = [
   ReactiveFormsModule,
   FormsModule
-]
+];
 
 @NgModule({
   declarations: [],

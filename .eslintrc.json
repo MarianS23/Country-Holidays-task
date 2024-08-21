@@ -19,11 +19,11 @@
     "semi": ["error", "always"],
     "quotes": ["error", "single"],
     "indent": ["error", 2],
-    "no-unused-vars": ["warn"],
     "no-console": ["warn"],
     "eqeqeq": ["error", "always"],
     "curly": ["error", "all"],
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-explicit-any": "warn"
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/ban-tslint-comment": "off"
   }
 }
