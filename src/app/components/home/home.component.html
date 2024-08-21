@@ -1,0 +1,37 @@
+<div class="indentation"></div>
+<div class="container">
+  <form class="search-field" [formGroup]="form">
+    <mat-form-field class="mat-form-field-width">
+      <mat-label>Search request</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="searchValue"
+        placeholder="Ukraine"
+        [matAutocomplete]="auto"/>
+      <mat-autocomplete #auto="matAutocomplete">
+        <div *ngIf="this.form.get('searchValue')?.value">
+          <mat-option
+            *ngFor="let country of filteredCountry | async"
+            [value]="country.name"
+            (click)="countrySelected(country)">
+            {{ country.name }}
+          </mat-option>
+        </div>
+      </mat-autocomplete>
+      <button
+        *ngIf="this.form.get('searchValue')?.value"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="clearSearch()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </form>
+  <div class="widget-container">
+    <app-widget-card></app-widget-card>
+    <app-widget-card></app-widget-card>
+    <app-widget-card></app-widget-card>
+  </div>
+</div>

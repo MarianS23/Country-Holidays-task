@@ -1,0 +1,11 @@
+<div class="widget-card" (click)="selectedCountry(currentCountry)">
+    <mat-card class="mat-card-class">
+        <mat-card-header>
+          <mat-card-title>{{currentCountry.name}}</mat-card-title>
+          <mat-card-subtitle>{{currentHoliday.name}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          {{currentHoliday.date}}
+        </mat-card-content>
+    </mat-card>                           
+</div>

@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="nav-menu">
+    <ul class="breadcrumbs">
+      <li [routerLink]="['']">Home</li>
+      <li>{{currentCountryName}}</li>
+    </ul>
+  </div>
+  <div class="table-container">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!-- Position Column -->
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef>No.</th>
+        <td mat-cell *matCellDef="let element">{{ dataSource.indexOf(element) + 1 }}</td>
+      </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+      <!-- Date Column -->
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>Date</th>
+        <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+      </ng-container>
+      <!-- Type Column -->
+      <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef>Type</th>
+        <td mat-cell *matCellDef="let element">{{ element.types }}</td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+  <div class="paginator">
+    <mat-button-toggle-group
+      name="fontStyle"
+      aria-label="Font Style"
+      [(ngModel)]="selectedYear"
+      (change)="onYearChange()">
+      <mat-button-toggle *ngFor="let year of yearsList" [value]="year">
+        {{year}}
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</div>
